@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1024.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.GERENCIAR.JanelaGerenciarController">
+   <children>
+      <JFXTextField fx:id="tfid" editable="false" focusColor="BLACK" labelFloat="true" layoutX="20.0" layoutY="20.0" prefHeight="31.0" prefWidth="62.0" promptText="Código" />
+      <JFXComboBox fx:id="cbdestino" focusColor="BLACK" layoutX="387.0" layoutY="20.0" prefHeight="31.0" prefWidth="229.0" promptText="Destino" />
+      <JFXTextField fx:id="tfcc" focusColor="BLACK" layoutX="644.0" layoutY="20.0" prefHeight="25.0" prefWidth="171.0" promptText="C. de Custo" />
+      <JFXComboBox fx:id="cbpass1" focusColor="BLACK" layoutX="20.0" layoutY="144.0" prefHeight="25.0" prefWidth="215.0" promptText="Passageiro 1" />
+      <JFXComboBox fx:id="cbpass2" focusColor="BLACK" layoutX="257.0" layoutY="144.0" prefHeight="25.0" prefWidth="215.0" promptText="Passageiro 2" />
+      <JFXComboBox fx:id="cbpass3" focusColor="BLACK" layoutX="20.0" layoutY="206.0" prefHeight="25.0" prefWidth="215.0" promptText="Passageiro 3" />
+      <JFXTimePicker fx:id="tphida" defaultColor="BLACK" layoutX="185.0" layoutY="82.0" prefHeight="31.0" prefWidth="135.0" promptText="Hora da ida" />
+      <JFXDatePicker fx:id="dpvolta" defaultColor="BLACK" layoutX="356.0" layoutY="82.0" prefHeight="31.0" prefWidth="135.0" promptText="Data da volta" />
+      <JFXDatePicker fx:id="dpida" defaultColor="BLACK" layoutX="20.0" layoutY="82.0" prefHeight="31.0" prefWidth="135.0" promptText="Data da ida" />
+      <JFXTimePicker fx:id="tphvolta" defaultColor="BLACK" layoutX="529.0" layoutY="82.0" prefHeight="31.0" prefWidth="135.0" promptText="Hora da volta" />
+      <JFXComboBox fx:id="cborigem" focusColor="BLACK" layoutX="118.0" layoutY="20.0" prefHeight="31.0" prefWidth="243.0" promptText="Origem" />
+      <TableView fx:id="tbrequisicao" layoutX="20.0" layoutY="326.0" prefHeight="408.0" prefWidth="966.0">
+         <columns>
+            <TableColumn fx:id="colid" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="colsituacao" prefWidth="75.0" text="SITUAÇÃO" />
+            <TableColumn fx:id="coldataida" prefWidth="88.0" text="DATA IDA" />
+            <TableColumn fx:id="coldatavolta" prefWidth="62.0" text="DATA VOLTA" />
+            <TableColumn fx:id="colhoraida" prefWidth="75.0" text="HORA IDA" />
+            <TableColumn fx:id="colhoravolta" prefWidth="75.0" text="HORA VOLTA" />
+            <TableColumn fx:id="coloirgem" prefWidth="75.0" text="ORIGEM" />
+            <TableColumn fx:id="coldestino" prefWidth="75.0" text="DESTINO" />
+            <TableColumn fx:id="colcc" prefWidth="75.0" text="C. CUSTO" />
+            <TableColumn fx:id="colhotel" prefWidth="75.0" text="HOTEL?" />
+            <TableColumn fx:id="colp1" prefWidth="75.0" text="PASSAGEIRO 1" />
+            <TableColumn fx:id="colp2" prefWidth="75.0" text="PASSAGEIRO 2" />
+            <TableColumn fx:id="colp3" prefWidth="75.0" text="PASSAGEIRO 3" />
+            <TableColumn fx:id="colp4" prefWidth="75.0" text="PASSAGEIRO 4" />
+            <TableColumn fx:id="colmotivoviagem" prefWidth="75.0" text="MOTIVO DA VIAGEM" />
+            <TableColumn fx:id="colobs" prefWidth="75.0" text="OBSERVAÇÕES" />
+            <TableColumn fx:id="colmotorista" prefWidth="75.0" text="MOTORISTA" />
+            <TableColumn fx:id="colveiculo" prefWidth="75.0" text="VEICULO" />
+         </columns>
+      </TableView>
+      <JFXComboBox fx:id="cbpass4" focusColor="BLACK" layoutX="257.0" layoutY="206.0" prefHeight="25.0" prefWidth="215.0" promptText="Passageiro 4" />
+      <JFXTextArea fx:id="tamotivo" focusColor="BLACK" labelFloat="true" layoutX="20.0" layoutY="261.0" prefHeight="45.0" prefWidth="966.0" promptText="Motivo da Viagem:" />
+      <JFXComboBox fx:id="cbhotel" focusColor="BLACK" layoutX="839.0" layoutY="20.0" prefHeight="31.0" prefWidth="146.0" promptText="Reservar Hotel?" />
+      <JFXTextArea fx:id="taobs" focusColor="BLACK" labelFloat="true" layoutX="789.0" layoutY="144.0" prefHeight="93.0" prefWidth="197.0" promptText="Observações:" />
+      <JFXButton layoutX="581.0" layoutY="748.0" onAction="#confirmar" style="-fx-background-color: black;" text="Confirmar Viagem" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="729.0" layoutY="748.0" onAction="#gerenciar" style="-fx-background-color: black;" text="Gerenciar Viagem" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="874.0" layoutY="748.0" onAction="#cancelar" style="-fx-background-color: black;" text="Cancelar Viagem" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="20.0" layoutY="748.0" onAction="#buscar" style="-fx-background-color: black;" text="Buscar" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="cbsituacao" focusColor="BLACK" layoutX="639.0" layoutY="144.0" promptText="Situação" />
+      <JFXComboBox fx:id="cbmotorista" focusColor="BLACK" layoutX="500.0" layoutY="206.0" prefHeight="31.0" prefWidth="266.0" promptText="MOTORISTA" />
+      <JFXComboBox fx:id="cbveiculo" focusColor="BLACK" layoutX="500.0" layoutY="144.0" promptText="Veículo" />
+   </children>
+</AnchorPane>
